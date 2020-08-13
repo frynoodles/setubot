@@ -36,10 +36,8 @@ public class Setu {
     public String get() {
         Request request;
         request = new Request.Builder()
-                .url("https://api.lolicon.app/setu/")
+                .url("https://api.lolicon.app/setu/?apikey="+BotConfig.getApiKey()+"&r18="+BotConfig.getR18())
                 .get()
-                .addHeader("apikey", BotConfig.getApiKey())
-                .addHeader("r18", BotConfig.getR18())
                 .build();
         try {
             Response response = client.newCall(request).execute();
