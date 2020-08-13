@@ -27,9 +27,9 @@ public class SetuListener {
             }
         } else if (msg instanceof GroupMsg) {
             if (info == null) {
-                sender.SENDER.sendPrivateMsg((GroupMsg) msg, KQCodeUtils.INSTANCE.toCq("image", "file=" + setu.getPicLocation()) + setu.getFormat());
+                sender.SENDER.sendGroupMsg((GroupMsg) msg, KQCodeUtils.INSTANCE.toCq("image", "file=" + setu.getPicLocation()) + setu.getFormat());
             } else {
-                sender.SENDER.sendPrivateMsg((GroupMsg) msg, info);
+                sender.SENDER.sendGroupMsg((GroupMsg) msg, info);
             }
         }
     }
