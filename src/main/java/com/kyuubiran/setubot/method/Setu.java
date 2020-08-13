@@ -19,7 +19,11 @@ public class Setu {
     private final static int CODE_KEYWORD_PIC_NOT_FOUND = 404;
     private final static int CODE_LIMITED_CALL = 429;
 
-    private final static OkHttpClient client = new OkHttpClient();
+    private final static OkHttpClient client = new OkHttpClient.Builder()
+            .callTimeout(20, TimeUnit.SECONDS)
+            .connectTimeout(20,TimeUnit.SECONDS)
+            .build();
+    //增加连接超时设置
     private String url;
     private int p;
     private int uid;
