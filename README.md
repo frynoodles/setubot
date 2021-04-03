@@ -1,11 +1,15 @@
-# setubot
-"来点色图.gif"
+# Setubot
+## 准备
+- windows idea平台  
+修改A_Setubot_Data中config.json的信息，每个冒号右边是对应左边的值，有说明。  
+  
+- linux平台（window使用cmd同）  
+使用打包好的文件，内附说明
+  
+## 使用方法
+help指令查看
 
-## 如何使用
-1.在conf.properties文件里输入你的qq账号和密码
-
-2.前往api.lolicon.app获取api
-
-3.修改bot_config.json中的相关权限 并且填入你的api key
-
-4.运行
+## 登录失败？请参考
+- 修改myDeviceInfo.json,前往https://ryoii.github.io/mirai-devicejs-generator/，填写相关信息（不知道的就空着），点击generate，用下载的文件中的内容替换掉myDeviceInfo.json的内容
+- 参考下图  
+  ![114514](src/main/resources/QQ截图20210403210135.png)
