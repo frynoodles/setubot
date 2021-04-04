@@ -25,7 +25,7 @@ object Utils {
         val botConfigFile = File(BotConfig_Path)
         if (!dataDir.exists()) {
             dataDir.mkdir()
-            println(dataDir.absolutePath)
+            println("\n+++++++\n资源文件的位置->${dataDir.absolutePath}\n+++++++\n")
         }
         if (!deviceInfoFile.exists()) {
             deviceInfoFile.createNewFile()
