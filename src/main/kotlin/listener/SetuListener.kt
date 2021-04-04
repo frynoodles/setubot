@@ -1,15 +1,17 @@
 package listener
 
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.launch
+
 import net.mamoe.mirai.event.subscribeAlways
 import net.mamoe.mirai.message.GroupMessageEvent
 import net.mamoe.mirai.message.data.Image
+import net.mamoe.mirai.message.data.PlainText
 import net.mamoe.mirai.message.data.content
+import net.mamoe.mirai.message.sendImage
 import util.BotConfig
 import util.Log
 import util.bot
 import util.Setu
+import java.io.File
 
 
 class SetuListener {
@@ -30,11 +32,8 @@ class SetuListener {
                         val setu = Setu()
                         val info = setu.get()
                         if (info == null) {
-                            reply(Image("${setu.getPicLocation()}"))
-                            reply(setu.getFormat())
-                            bot.launch {
-                                delay(20000)
-                            }
+                            group.sendImage(File(setu.getPicLocation()))
+                            reply(setu.getFormat().toString())
                         } else {
                             reply(info)
                         }
@@ -54,11 +53,13 @@ class SetuListener {
                     reply("测试通过")
                 }
                 msg == "help" -> {
-                    reply("指令：\n" +
-                            "1、!setu   随机涩图\n" +
-                            "2、!setAPIKey (your apikey）  设置apikey\n" +
-                            "3、!setR18 (0/1/2)    设置r18，0=off 1=on 2=both\n" +
-                            "备注：获取loliconAPI请参考https://api.lolicon.app/#/setu?id=apikey")
+                    reply(
+                        "指令：\n" +
+                                "1、!setu   随机涩图\n" +
+                                "2、!setAPIKey (your apikey）  设置apikey\n" +
+                                "3、!setR18 (0/1/2)    设置r18，0=off 1=on 2=both\n" +
+                                "备注：获取loliconAPI请参考https://api.lolicon.app/#/setu?id=apikey"
+                    )
                 }
             }
         }

@@ -2,15 +2,12 @@
 ## 功能
 - QQ群随机涩图（每天300次，另请珍惜账号，少使用R18）
 ## 准备
-- windows idea平台  
-~~修改A_Setubot_Data中config.json的信息，每个冒号右边是对应左边的值，有说明。~~  
+- ~~windows idea平台~~  
+~~修改A_Setubot_Data中config.json的信息，每个冒号右边是对应左边的值，有说明。~~
   
-  直接启动
-  
-- linux平台（window使用cmd同）  
-~~使用打包好的文件，内附说明~~
-  
-  直接启动
+- ~~linux平台（window使用cmd同）~~  
+~~使用打包好的文件，内附说明~~  
+  下载telegram，获取APIkey后运行，apikey可在运行后再设置，暂时不支持多apikey。其他内容根据提示即可
 ## 使用方法
 help指令查看
 

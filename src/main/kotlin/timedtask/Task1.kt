@@ -8,7 +8,6 @@ import util.bot
 import java.io.File
 
 
-
 //
 // Created by frynoodles on 2021/4/4 17:47
 //
@@ -19,17 +18,21 @@ class Task1 {
 
     private fun InitTask() {
         bot.launch {
-            while (true){
+            while (true) {
                 try {
-                    val picDir= File(Pic_Path)
-                    if (picDir.exists()){
-                        picDir.delete()
-                        Log.i("定时任务1：删除文件夹${Pic_Path}已完成")
+                    val picDir = File(Pic_Path)
+                    if (picDir.exists()) {
+                        val files = picDir.listFiles()
+                        for (file in files) {
+                            println("开始删除图片${file.absoluteFile}")
+                            file.delete()
+                        }
+                        Log.i("定时任务1：清理文件夹${Pic_Path}已完成")
                     }
-                }catch (e:Exception){
+                } catch (e: Exception) {
 
                 }
-                delay(1000*60*24)
+                delay(1000 * 60 * 24)
             }
         }
     }

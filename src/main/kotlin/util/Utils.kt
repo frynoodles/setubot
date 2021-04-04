@@ -11,8 +11,8 @@ const val deviceInfo =
 
 object Utils {
 
-    const val Package_Path = "./A_Setubot_Data"
-    const val FILE_PATH = "./A_Setubot_Data/"
+    const val Package_Path = "A_Setubot_Data"
+    const val FILE_PATH = "A_Setubot_Data/"
     const val DeviceInfo_Path = "${FILE_PATH}myDeviceInfo.json"
     const val BotConfig_Path = "${FILE_PATH}bot_config.json"
     const val Config_Path = "${FILE_PATH}config.json"
