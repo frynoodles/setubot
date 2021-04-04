@@ -17,4 +17,4 @@ help指令查看
   ![114514](src/main/resources/QQ截图20210403210135.png)
 - 更换账号
   
-## 本机器人依赖于mirai->https://github.com/mamoe/mirai 和loliconAPI->https://api.lolicon.app/#/setu?id=apikey  
+## 本机器人依赖于[mirai](https://github.com/mamoe/mirai) 和[loliconAPI](https://api.lolicon.app/#/setu?id=apikey)  
