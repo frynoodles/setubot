@@ -2,6 +2,7 @@ package util
 
 import com.alibaba.fastjson.JSON
 import com.alibaba.fastjson.JSONObject
+import util.Utils.Config_Path
 import java.io.File
 
 object ConfigManager {
@@ -10,7 +11,7 @@ object ConfigManager {
     const val CFG_OWNER = "owner"                      //T:Long        D:0L
     const val CFG_DEF_MUTE_TIME = "defMuteTime"        //T:Int         D:3600
 
-    private val cfgFile = File("${FILE_PATH}config.json")
+    private val cfgFile = File(Config_Path)
     private lateinit var config: JSONObject
 
     init {
@@ -107,7 +108,6 @@ object ConfigManager {
             defValue
         }
     }
-
 
 
     fun getStringOrDef(key: String, defValue: String): String {

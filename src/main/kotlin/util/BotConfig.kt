@@ -2,6 +2,7 @@ package util
 
 import com.alibaba.fastjson.JSON
 import com.alibaba.fastjson.JSONObject
+import util.Utils.BotConfig_Path
 import java.io.*
 import java.lang.StringBuilder
 import java.nio.charset.StandardCharsets
@@ -16,7 +17,7 @@ object BotConfig {
             val sb = StringBuilder()
             try {
                 val reader: Reader = InputStreamReader(
-                    FileInputStream("./A_Setubot_Data/bot_config.json"),
+                    FileInputStream(BotConfig_Path),
                     StandardCharsets.UTF_8
                 )
                 var ch: Int
@@ -36,7 +37,7 @@ object BotConfig {
         val config = JSON.parseObject(botConfig)
         try {
             val osw = OutputStreamWriter(
-                FileOutputStream("./A_Setubot_Data/bot_config.json"), StandardCharsets.UTF_8
+                FileOutputStream(BotConfig_Path), StandardCharsets.UTF_8
             )
             when (type) {
                 "setApiKey" -> {

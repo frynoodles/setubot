@@ -36,8 +36,8 @@ public class Setu {
     request = new Request.Builder()
         .url("https://api.lolicon.app/setu/")
         .get()
-        .addHeader("apikey", BotConfig.getApiKey())
-        .addHeader("r18", BotConfig.getR18())
+        .addHeader("apikey", BotConfig.INSTANCE.getApiKey())
+        .addHeader("r18", BotConfig.INSTANCE.getR18())
         .build();
     try {
       Response response = client.newCall(request).execute();
@@ -79,7 +79,7 @@ public class Setu {
 
   @SuppressWarnings("ResultOfMethodCallIgnored")
   private void downloadPic() throws IOException {
-    File picDir = new File("pic").getAbsoluteFile();
+    File picDir = new File(Utils.FILE_PATH+"pic").getAbsoluteFile();
     if (!picDir.exists()) {
       picDir.mkdir();
     }

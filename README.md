@@ -1,11 +1,14 @@
 # Setubot
 ## 准备
 - windows idea平台  
-修改A_Setubot_Data中config.json的信息，每个冒号右边是对应左边的值，有说明。  
+~~修改A_Setubot_Data中config.json的信息，每个冒号右边是对应左边的值，有说明。~~  
+  
+  直接启动
   
 - linux平台（window使用cmd同）  
-使用打包好的文件，内附说明
+~~使用打包好的文件，内附说明~~
   
+  直接启动
 ## 使用方法
 help指令查看
 

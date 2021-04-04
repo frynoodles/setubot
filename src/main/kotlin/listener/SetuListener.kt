@@ -1,5 +1,7 @@
 package listener
 
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 import net.mamoe.mirai.event.subscribeAlways
 import net.mamoe.mirai.message.GroupMessageEvent
 import net.mamoe.mirai.message.data.Image
@@ -30,8 +32,11 @@ class SetuListener {
                         if (info == null) {
                             reply(Image("${setu.getPicLocation()}"))
                             reply(setu.getFormat())
+                            bot.launch {
+                                delay(20000)
+                            }
                         } else {
-                            reply("总之就是失败了")
+                            reply(info)
                         }
                     } catch (e: Exception) {
                         Log.e(e)
